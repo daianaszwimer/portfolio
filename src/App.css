@@ -67,8 +67,24 @@
 	color: #cc0052;
 }
 
+.video-toggle-light:hover {
+	color: #9000bd;
+}
+
+.video-toggle-dark:hover {
+	color: #c83eff;
+}
+
 .video-toggle-dark {
 	display: inline-block;
 	cursor: pointer;
 	color: #FF838E;
+}
+
+@media (max-width: 750px) {
+	.toggle {
+		position: static;
+		margin-left: 15px;
+		width: 100%;
+	}
 }

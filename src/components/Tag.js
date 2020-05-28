@@ -7,6 +7,7 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.h4`
+	display: inline-block;
 	cursor: pointer;
 	&:hover {
 		color: ${hoverColor};

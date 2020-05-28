@@ -15,4 +15,9 @@ export const hoverColor = theme("theme", {
 	dark: "#FF838E",
 })
 
+export const hoverLinkColor = theme("theme", {
+	light: "#9000bd",
+	dark: "#c83eff",
+})
+
 export const themes = { light: 'light', dark: 'dark'}

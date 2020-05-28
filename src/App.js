@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './App.css';
-import { themes, backgroundColor, textColor } from './themes/themeContext'
+import { themes, backgroundColor, textColor, hoverLinkColor } from './themes/themeContext'
 import styled, { ThemeProvider } from "styled-components";
 import ThemeToggle from './components/ThemeToggle'
 import Tag from "./components/Tag"
@@ -14,6 +14,12 @@ const Container = styled.div`
 	background-color: ${backgroundColor};
 	color: ${textColor};
     min-height: calc(100vh - 30px);
+    @media (max-width: 750px) {
+    	flex-wrap: wrap;
+    }
+    a:hover {
+    	color: ${hoverLinkColor};
+    }
 `;
 const Footer = styled.footer`
 	background-color: ${backgroundColor};
@@ -24,6 +30,9 @@ const Footer = styled.footer`
 	height: 30px;
 	text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    a:hover {
+    	color: ${hoverLinkColor};
+    }
 `
 const CVItems = styled.div`
 	margin-left: 15px;
@@ -37,6 +46,9 @@ const Me = styled.div`
     max-width: 32%;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    @media (max-width: 750px) {
+	    max-width: 100%;
+    }
 `
 const ContactWrapper = styled.div`
 	padding: 0 15px;
@@ -78,6 +90,7 @@ function App() {
 	return (
 		<ThemeProvider theme={{theme}}>
 			<Container>
+				<ThemeToggle handleToggle={toggleTheme}/>
 				<Me>
 					<Name>Hola, me llamo Daiana y soy Full Stack Developer</Name>
 					<Picture
@@ -86,11 +99,10 @@ function App() {
 					/>
 					<ContactWrapper>
 						<h3>Contacto:</h3>
-						<Contact name='Linkedin' url='https://www.linkedin.com/in/daiana-szwimer/' text='https://www.linkedin.com/in/daiana-szwimer/'/>
+						<Contact name='LinkedIn' url='https://www.linkedin.com/in/daiana-szwimer/' text='https://www.linkedin.com/in/daiana-szwimer/'/>
 						<Contact name='Mail' url='mailto:daiu.szwimer@gmail.com' text='daiu.szwimer@gmail.com'/>
 					</ContactWrapper>
 				</Me>
-				<ThemeToggle handleToggle={toggleTheme}/>
 				<div className='tag tag-wrapper'>
 					<h4>{`<CV>`}</h4>
 						<CVItems>
@@ -141,9 +153,9 @@ function App() {
 								closedTag
 							>
 								<TagChild>
-									Me gusta enseñar, en la empresa donde actualmente trabajo di una charla virtual sobre React Hooks <div onClick={handleToggleVideo} className={`video-toggle-${theme}`}>la podés ver clickeando acá.</div><br/>
+									Me gusta enseñar, en la empresa donde actualmente trabajo di una charla virtual sobre React Hooks <div onClick={handleToggleVideo} className={`video-toggle-${theme}`}>la podés ver clickeando acá</div>.<br/>
 									{renderYoutubeVideo()}
-									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a><br/>
+									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a>.<br/>
 									Desde 2019 soy ayudante de la materia Paradigmas de Programación en mi facultad.<br/>
 									Entre 2016 y 2018 me desempeñé como líder de grupo en educación no formal de una ONG a cargo de grupo de niños y en 2019 fui coordinadora de ese área.<br/>
 								</TagChild>
