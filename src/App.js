@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import { themes, backgroundColor, textColor } from './themes/themeContext'
+import styled, { ThemeProvider } from "styled-components";
+import ThemeToggle from './components/ThemeToggle'
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: ${backgroundColor};
+  color: ${textColor};
+`;
 
 function App() {
+
+  const [ theme, setTheme ] = useState(themes.light)
+
+  const toggleTheme = () => {setTheme(prevTheme => prevTheme === themes.light ? themes.dark : themes.light)}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={{theme}}>
+        <Container>
+            <ThemeToggle handleToggle={toggleTheme}/>
+        </Container>
+      </ThemeProvider>
   );
 }
 
