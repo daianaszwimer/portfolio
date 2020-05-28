@@ -9,8 +9,8 @@ const HiddenCheckbox = styled.input`
 const Toggle = styled.label`
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 200px;
-	height: 100px;
+    width: 75px;
+    height: 35px;
 	background: #242B50;
 	display: block;
 	border-radius: 100px;

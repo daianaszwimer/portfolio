@@ -1,5 +1,7 @@
 .toggle {
-
+	position: absolute;
+	right: 35px;
+	top: 0;
 }
 
 .toggle-light::after {
@@ -7,8 +9,8 @@
 	position: absolute;
 	top: 5px;
 	left: 5px;
-	width: 90px;
-	height: 90px;
+	width: 25px;
+	height: 25px;
 	border-radius: 90px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -21,8 +23,8 @@
 	content: "";
 	position: absolute;
 	top: 5px;
-	width: 90px;
-	height: 90px;
+	width: 25px;
+	height: 25px;
 	border-radius: 90px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -34,7 +36,8 @@
 }
 
 .tag-wrapper {
-	width: 50%;
+	flex: 1 1 auto;
+	padding: 0 15px;
 }
 
 .link-dark {

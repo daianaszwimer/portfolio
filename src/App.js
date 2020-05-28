@@ -9,18 +9,23 @@ const Container = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 	font-family: sans-serif;
 	background-color: ${backgroundColor};
 	color: ${textColor};
 `;
+const Footer = styled.div`
+	background-color: ${backgroundColor};
+	color: ${textColor};
+`
 const CVItems = styled.div`
 	margin-left: 15px;
 `;
 const TagChild = styled.div`
 	margin-left: 30px;
+`
+const Me = styled.div`
+	flex: 1 1 auto;
 `
 
 function App() {
@@ -48,6 +53,12 @@ function App() {
 	return (
 		<ThemeProvider theme={{theme}}>
 			<Container>
+				<Me>
+					<img
+						alt='Foto de Daiana'
+						src='https://media-exp1.licdn.com/dms/image/C4E03AQGkXZYHv8NR2w/profile-displayphoto-shrink_200_200/0?e=1596067200&v=beta&t=Nyu-gumkrw3p-cflbE0ubKDSsE9MFHqI5fm6QCLbHeo'
+					/>
+				</Me>
 				<ThemeToggle handleToggle={toggleTheme}/>
 				<div className='tag tag-wrapper'>
 					<h4>{`<CV>`}</h4>
@@ -57,11 +68,11 @@ function App() {
 								closedTag
 							>
 								<TagChild>
-									Empecé a trabajar en Febrero de 2017 en <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer">PSh</a>, donde trabajo actualmente.<br/>
+									Empecé a trabajar en Febrero de 2017 en <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer" title='PSh'>PSh</a>, donde trabajo actualmente.<br/>
 									Entre Febrero y Abril de ese año programé en React Native.<br/>
 									A partir de Abril de 2017 y hasta la actualidad, programo en PHP, Node.js y React.js <span role='img' aria-label='red heart'>❤️</span>️<br/>
 									De React, soy una de las referentes técnicas en mi proyecto (esta página está hecha con React <span role='img' aria-label='face tongue'>😜️</span>️)<br/>
-									Trabajo en el desarrollo de <a className={`link-${theme}`} href='https://nearpod.com/' target='_blank' rel="noopener noreferrer">Nearpod</a>.<br/>
+									Trabajo en el desarrollo de <a className={`link-${theme}`} href='https://nearpod.com/' title='Nearpod' target='_blank' rel="noopener noreferrer">Nearpod</a>.<br/>
 								</TagChild>
 							</Tag>
 							<Tag
@@ -101,7 +112,7 @@ function App() {
 								<TagChild>
 									Me gusta enseñar, en la empresa donde actualmente trabajo di una charla virtual sobre React Hooks <div onClick={handleToggleVideo} className={`video-toggle-${theme}`}>la podés ver clickeando acá.</div>
 									{renderYoutubeVideo()}
-									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer">curso sobre accesibilidad web</a><br/>
+									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a><br/>
 									Desde 2019 soy ayudante de la materia Paradigmas de Programación en mi facultad.<br/>
 									Entre 2016 y 2018 me desempeñé como líder de grupo en educación no formal de una ONG a cargo de grupo de niños y en 2019 fui coordinadora de ese área.<br/>
 								</TagChild>
@@ -110,6 +121,9 @@ function App() {
 					<h4>{`</CV>`}</h4>
 				</div>
 			</Container>
+			<Footer>
+				Icons made by <a className={`link-${theme}`} href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target='_blank' rel="noopener noreferrer">Smashicons</a> from <a className={`link-${theme}`} href="https://www.flaticon.com/" title="Flaticon" target='_blank' rel="noopener noreferrer"> www.flaticon.com</a>
+			</Footer>
 		</ThemeProvider>
 	);
 }
