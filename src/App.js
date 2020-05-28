@@ -4,28 +4,53 @@ import { themes, backgroundColor, textColor } from './themes/themeContext'
 import styled, { ThemeProvider } from "styled-components";
 import ThemeToggle from './components/ThemeToggle'
 import Tag from "./components/Tag"
+import Contact from "./components/Contact"
 
 const Container = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
 	justify-content: center;
-	font-family: sans-serif;
 	background-color: ${backgroundColor};
 	color: ${textColor};
+    min-height: calc(100vh - 30px);
 `;
-const Footer = styled.div`
+const Footer = styled.footer`
 	background-color: ${backgroundColor};
 	color: ${textColor};
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+    font-family: 'Ubuntu', sans-serif;
 `
 const CVItems = styled.div`
 	margin-left: 15px;
 `;
 const TagChild = styled.div`
 	margin-left: 30px;
+	animation: fadein 0.5s;
 `
 const Me = styled.div`
-	flex: 1 1 auto;
+	flex: 1 0 auto;
+    max-width: 32%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+`
+const ContactWrapper = styled.div`
+	padding: 0 15px;
+    text-align: left;
+    animation: slideInFromLeft 3s;
+`
+const Picture = styled.img`
+	max-width: 65%;
+	border-radius: 50%;
+	height: auto;
+	animation: slideInFromLeft 2s;
+`
+const Name = styled.h1`
+	animation: slideInFromLeft 1s;
 `
 
 function App() {
@@ -54,14 +79,16 @@ function App() {
 		<ThemeProvider theme={{theme}}>
 			<Container>
 				<Me>
-					<img
+					<Name>Hola, me llamo Daiana y soy Full Stack Developer</Name>
+					<Picture
 						alt='Foto de Daiana'
 						src='https://avatars3.githubusercontent.com/u/32345857?s=460&u=2e218a8e8b7dca8deecd219439feec069206784c&v=4'
 					/>
-					<div>
-						Linkedin: <a className={`link-${theme}`} href='https://www.linkedin.com/in/daiana-szwimer/' title='Linkedin' target='_blank' rel="noopener noreferrer">https://www.linkedin.com/in/daiana-szwimer/</a>
-						Mail: <a className={`link-${theme}`} href='mailto:daiu.szwimer@gmail.com' title='Mail' target='_blank' rel="noopener noreferrer">daiu.szwimer@gmail.com</a>
-					</div>
+					<ContactWrapper>
+						<h3>Contacto:</h3>
+						<Contact name='Linkedin' url='https://www.linkedin.com/in/daiana-szwimer/' text='https://www.linkedin.com/in/daiana-szwimer/'/>
+						<Contact name='Mail' url='mailto:daiu.szwimer@gmail.com' text='daiu.szwimer@gmail.com'/>
+					</ContactWrapper>
 				</Me>
 				<ThemeToggle handleToggle={toggleTheme}/>
 				<div className='tag tag-wrapper'>

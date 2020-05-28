@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styled, { ThemeContext } from "styled-components";
-import {backgroundColor, textColor} from "../themes/themeContext"
+import styled  from "styled-components";
+import { hoverColor } from "../themes/themeContext"
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -8,6 +8,9 @@ const Wrapper = styled.div`
 
 const Name = styled.h4`
 	cursor: pointer;
+	&:hover {
+		color: ${hoverColor};
+	}
 `
 
 const Tag = (props) => {
