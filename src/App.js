@@ -56,8 +56,12 @@ function App() {
 				<Me>
 					<img
 						alt='Foto de Daiana'
-						src='https://media-exp1.licdn.com/dms/image/C4E03AQGkXZYHv8NR2w/profile-displayphoto-shrink_200_200/0?e=1596067200&v=beta&t=Nyu-gumkrw3p-cflbE0ubKDSsE9MFHqI5fm6QCLbHeo'
+						src='https://avatars3.githubusercontent.com/u/32345857?s=460&u=2e218a8e8b7dca8deecd219439feec069206784c&v=4'
 					/>
+					<div>
+						Linkedin: <a className={`link-${theme}`} href='https://www.linkedin.com/in/daiana-szwimer/' title='Linkedin' target='_blank' rel="noopener noreferrer">https://www.linkedin.com/in/daiana-szwimer/</a>
+						Mail: <a className={`link-${theme}`} href='mailto:daiu.szwimer@gmail.com' title='Mail' target='_blank' rel="noopener noreferrer">daiu.szwimer@gmail.com</a>
+					</div>
 				</Me>
 				<ThemeToggle handleToggle={toggleTheme}/>
 				<div className='tag tag-wrapper'>
