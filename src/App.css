@@ -3,28 +3,56 @@
 }
 
 .toggle-light::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 90px;
-  height: 90px;
-  border-radius: 90px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #F8F9FF;
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	background-color: #F8F9FF;
 }
 
 .toggle-dark::after {
-  transform: translateX(-100%);
-  left: calc(100% - 5px);
-  content: "";
-  position: absolute;
-  top: 5px;
-  width: 90px;
-  height: 90px;
-  border-radius: 90px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #F8F9FF;
+	transform: translateX(-100%);
+	left: calc(100% - 5px);
+	content: "";
+	position: absolute;
+	top: 5px;
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	background-color: #F8F9FF;
+}
+
+.tag {
+	font-family: 'Roboto Mono', monospace;
+}
+
+.tag-wrapper {
+	width: 50%;
+}
+
+.link-dark {
+	color: #FF838E;
+}
+
+.link-light {
+	color: #cc0052;
+}
+
+.video-toggle-light {
+	display: inline-block;
+	cursor: pointer;
+	color: #cc0052;
+}
+
+.video-toggle-dark {
+	display: inline-block;
+	cursor: pointer;
+	color: #FF838E;
 }
