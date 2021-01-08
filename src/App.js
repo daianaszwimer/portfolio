@@ -92,7 +92,7 @@ function App() {
 			<Container>
 				<ThemeToggle handleToggle={toggleTheme}/>
 				<Me>
-					<Name>Hola, me llamo Daiana y soy Full Stack Developer</Name>
+					<Name>Hola, me llamo Daiana Szwimer y soy Full Stack Developer</Name>
 					<Picture
 						alt='Foto de Daiana'
 						src='https://avatars3.githubusercontent.com/u/32345857?s=460&u=2e218a8e8b7dca8deecd219439feec069206784c&v=4'
