@@ -1,38 +1,44 @@
 import React, {useState} from 'react'
 import './App.css';
-import { themes, backgroundColor, textColor, hoverLinkColor } from './themes/themeContext'
+import { themes } from './themes/themeContext'
 import styled, { ThemeProvider } from "styled-components";
-import ThemeToggle from './components/ThemeToggle'
-import Tag from "./components/Tag"
-import Contact from "./components/Contact"
+import Box from "./components/Box"
+import Column from "./components/Column"
 
 const Container = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
 	justify-content: center;
-	background-color: ${backgroundColor};
-	color: ${textColor};
-    min-height: calc(100vh - 30px);
     @media (max-width: 750px) {
     	flex-wrap: wrap;
     }
-    a:hover {
-    	color: ${hoverLinkColor};
-    }
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #F56476 25%, transparent 25%) -50px 0, linear-gradient(225deg, #F56476 25%, transparent 25%) -50px 0, linear-gradient(315deg,
+     #F56476 25%, transparent 25%), linear-gradient(45deg, #F56476 25%, transparent 25%); background-size: 100px 100px;
+     background-color: #DFBBB1;
 `;
-const Footer = styled.footer`
-	background-color: ${backgroundColor};
-	color: ${textColor};
-	position: relative;
-	bottom: 0;
+/*    */
+const BoxContainer = styled.div`
+	display: flex;
 	width: 100%;
-	height: 30px;
+	justify-content: center;
+    flex-wrap: wrap;
+`
+const ColumnContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+`
+const Footer = styled.footer`
+	position: relative;
+	width: 100%;
 	text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    a:hover {
-    	color: ${hoverLinkColor};
-    }
+	bottom: 5px;
 `
 const CVItems = styled.div`
 	margin-left: 15px;
@@ -86,7 +92,7 @@ function App() {
 	const toggleTheme = () => {
 		setTheme(prevTheme => prevTheme === themes.light ? themes.dark : themes.light)
 	}
-
+/*
 	return (
 		<ThemeProvider theme={{theme}}>
 			<Container>
@@ -169,6 +175,34 @@ function App() {
 			</Footer>
 		</ThemeProvider>
 	);
+ */
+	const colorOne = "#F4E8C1";
+	const colorTwo = "#A0C1B9";
+	const colorThree = "#70A0AF";
+	const colorFour = "#706993";
+	const experience = "Tengo 4 años de experiencia como Full Stack Developer. Me gusta mucho trabajar con React y Node.js. Desde febrero 2017 hasta octubre 2020 trabajé en una software factory llamada PSh (originalmente se llamaba PSF). Actualmente me encuentro trabajando en Distillery";
+	const education = "Hice mi secundaria en la escuela Técnica ORT entre 2012 y 2016, donde me recibí con honores y con el título de Bachiller Té́cnico con Orientación en Informática y Medios de Comunicación Digitales.\n" +
+		"\tLuego, desde 2017 estoy estudiando en la Universidad Tecnológica Nacional la carrera de Ingeniería en Sistemas, me faltan dos años de carrera."
+	const technologies = "JavaScript (ES6), React, Redux, React Router, Typescript, Jest, SQL, T-SQL, CSS, SASS, PHP, Node.js, NestJS, Haskell, Prolog (paradigma lógico), C,\n" +
+		"\tJava, POO, git, microservicios, Docker, experiencia trabajando con metodologías ágiles (Scrum) y code review (MR/PR),\n" +
+		"\tpatrones de diseño y buenas prácticas de programación (me encanta el código prolijo que cumple con buenas prácticas)";
+	const psh = "";
+	const distillery = "";
+	return (
+		<ThemeProvider theme={{theme}}>
+			<Container>
+				<Name>Hola, soy Daiana Szwimer</Name>
+				<BoxContainer>
+					<Box text={experience} title="Experiencia"/>
+					<Box text={psh} title="Feb 2017 - Oct 2020"/>
+					<Box text={distillery} title="Oct 2020 - Present"/>
+					<Box text={education} title="Educación"/>
+					<Box text={technologies} title="Tecnologías"/>
+				</BoxContainer>
+				<Footer style={{position: "absolute"}}>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target='_blank' rel="noopener noreferrer">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target='_blank' rel="noopener noreferrer"> www.flaticon.com</a></Footer>
+			</Container>
+		</ThemeProvider>
+	)
 }
 
 export default App;
