@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './App.css';
 import { themes } from './themes/themeContext'
 import styled, { ThemeProvider } from "styled-components";
 import Box from "./components/Box"
 import Column from "./components/Column"
+import ThemeToggle from "./components/ThemeToggle";
+import { LocaleContext } from "./context/Locale"
+import { LocaleProvider } from "./context/Locale";
 
 const Container = styled.div`
 	display: flex;
@@ -188,12 +191,14 @@ function App() {
 		"\tpatrones de diseño y buenas prácticas de programación (me encanta el código prolijo que cumple con buenas prácticas)";
 	const psh = "";
 	const distillery = "";
+
 	return (
-		<ThemeProvider theme={{theme}}>
+		<LocaleProvider>
 			<Container>
-				<Name>Hola, soy Daiana Szwimer</Name>
+				<ThemeToggle/>
+				<Name>dasdasd</Name>
 				<BoxContainer>
-					<Box text={experience} title="Experiencia"/>
+					<Box text={experience} title="adasjkdak"/>
 					<Box text={psh} title="Feb 2017 - Oct 2020"/>
 					<Box text={distillery} title="Oct 2020 - Present"/>
 					<Box text={education} title="Educación"/>
@@ -201,7 +206,7 @@ function App() {
 				</BoxContainer>
 				<Footer style={{position: "absolute"}}>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target='_blank' rel="noopener noreferrer">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target='_blank' rel="noopener noreferrer"> www.flaticon.com</a></Footer>
 			</Container>
-		</ThemeProvider>
+		</LocaleProvider>
 	)
 }
 

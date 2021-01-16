@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useContext} from "react"
 import styled, {keyframes} from "styled-components";
+import {LocaleContext} from "../context/Locale";
 
 /*
 *   transition: 500ms linear;
@@ -24,11 +25,13 @@ const Element = styled.div`
 	}
 `
 
-const Box = props => (
-	<Element>
+const Box = props => {
+	const { dictionary } = useContext(LocaleContext);
+
+	return (<Element>
 		<h3>{props.title}</h3>
-		<span>{props.text}</span>
-	</Element>
-)
+		<span>{dictionary.test}</span>
+	</Element>)
+}
 
 export default Box
