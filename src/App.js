@@ -115,7 +115,7 @@ function App() {
 									Between February and April of 2017 I worked with React Native.<br/>
 									From April 2017 until my last day, my team and were working on building a website for a client named <a className={`link-${theme}`} href='https://nearpod.com/' title='Nearpod' target='_blank' rel="noopener noreferrer">Nearpod</a>. We used PHP, microservices with Node.js and React.js<span role='img' aria-label='red heart'>❤️</span><br/> In React I used libraries like CSSModules, Redux, Jest, React Router and more.️<br/>
 									In that project, I was one of React technical references (this page is made in React <span role='img' aria-label='face tongue'>😜️</span>️)<br/>
-									From October 2020 I've been working at <a className={`link-${theme}`} href='https://distillery.com/' target='_blank' rel="noopener noreferrer" title='Distillery'>Distillery</a>. Right now I'm working for a client migrating the codebase to a serverless architecture using: AWS (Lambda, DynamoDB, Cognito, etc), Serverless Framework and Node.js.
+									Since October 2020 I've been working at <a className={`link-${theme}`} href='https://distillery.com/' target='_blank' rel="noopener noreferrer" title='Distillery'>Distillery</a>. Right now I'm working for a client migrating the codebase to a serverless architecture using: AWS (Lambda, DynamoDB, Cognito, etc), Serverless Framework and Node.js.
 								</TagChild>
 							</Tag>
 							<Tag
