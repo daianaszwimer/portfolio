@@ -92,13 +92,13 @@ function App() {
 			<Container>
 				<ThemeToggle handleToggle={toggleTheme}/>
 				<Me>
-					<Name>Hola, me llamo Daiana y soy Full Stack Developer</Name>
+					<Name>Hi, my name is Daiana and I'm a Full Stack Developer</Name>
 					<Picture
 						alt='Foto de Daiana'
 						src='https://avatars3.githubusercontent.com/u/32345857?s=460&u=2e218a8e8b7dca8deecd219439feec069206784c&v=4'
 					/>
 					<ContactWrapper>
-						<h3>Contacto:</h3>
+						<h3>Contact:</h3>
 						<Contact name='LinkedIn' url='https://www.linkedin.com/in/daiana-szwimer/' text='https://www.linkedin.com/in/daiana-szwimer/'/>
 						<Contact name='Mail' url='mailto:daiu.szwimer@gmail.com' text='daiu.szwimer@gmail.com'/>
 					</ContactWrapper>
@@ -107,57 +107,60 @@ function App() {
 					<h4>{`<CV>`}</h4>
 						<CVItems>
 							<Tag
-								name='ExperienciaLaboral'
+								name='WorkExperience'
 								closedTag
 							>
 								<TagChild>
-									Empecé a trabajar en Febrero de 2017 en <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer" title='PSh'>PSh</a>, donde trabajo actualmente.<br/>
-									Entre Febrero y Abril de ese año programé en React Native.<br/>
-									A partir de Abril de 2017 y hasta la actualidad, programo en PHP, Node.js y React.js <span role='img' aria-label='red heart'>❤️</span>️<br/>
-									De React, soy una de las referentes técnicas en mi proyecto (esta página está hecha con React <span role='img' aria-label='face tongue'>😜️</span>️)<br/>
-									Trabajo en el desarrollo de <a className={`link-${theme}`} href='https://nearpod.com/' title='Nearpod' target='_blank' rel="noopener noreferrer">Nearpod</a>.<br/>
+									I started working in 2017 at <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer" title='PSh'>PSh</a> until October 2020.<br/>
+									Between February and April of 2017 I worked with React Native.<br/>
+									From April 2017 until my last day, my team and were working on building a website for a client named <a className={`link-${theme}`} href='https://nearpod.com/' title='Nearpod' target='_blank' rel="noopener noreferrer">Nearpod</a>. We used PHP, microservices with Node.js and React.js<span role='img' aria-label='red heart'>❤️</span><br/> In React I used libraries like CSSModules, Redux, Jest, React Router and more.️<br/>
+									In that project, I was one of React technical references (this page is made in React <span role='img' aria-label='face tongue'>😜️</span>️)<br/>
+									From October 2020 I've been working at <a className={`link-${theme}`} href='https://distillery.com/' target='_blank' rel="noopener noreferrer" title='Distillery'>Distillery</a>. Right now I'm working for a client migrating the codebase to a serverless architecture using: AWS (Lambda, DynamoDB, Cognito, etc), Serverless Framework and Node.js.
 								</TagChild>
 							</Tag>
 							<Tag
-								name='Educacion'
+								name='Education'
 								closedTag
 							>
 								<TagChild>
-									Hice mi secundaria en la escuela Técnica ORT entre 2012 y 2016, donde me recibí con honores y con el título de Bachiller Té́cnico con Orientación en Informática y Medios de Comunicación Digitales.<br/>
-									Luego, desde 2017 estoy estudiando en la Universidad Tecnológica Nacional la carrera de Ingeniería en Sistemas. Me encuentro cursando materias de tercer y cuarto año.<br/>
+									I went to High School at Escuela Técnica ORT between 2012 - 2016, where I graduated with honors specializing in Computer Science and Digital Mass Communications.<br/>
+									Then, since 2017 I've been studying at Universidad Tecnológica Nacional the Information Systems Engineering career. In two years I'll graduate.<br/>
 								</TagChild>
 							</Tag>
 							<Tag
-								name='Conocimientos'
+								name='Knowledge'
 								closedTag
 							>
 								<TagChild>
-									Tengo conocimientos en: JavaScript (ES6), React, Redux, Next.js, React Router, Typescript, Jest, SQL, T-SQL, CSS, SASS, PHP, Node.js, NestJS, Haskell (paradigma funcional), Prolog (paradigma lógico), C,
-									Java, POO, git, microservicios, básicos de Docker, experiencia trabajando con metodologías ágiles (Scrum) y code review (MR/PR),
-									patrones de diseño y buenas prácticas de programación (me encantan los códigos prolijos y que cumplen con buenas prácticas).<br/>
+									I have experience with: JavaScript (ES6), React, Redux, Redux Sagas, React Hooks, ESLint, Webpack, Typescript, Jest, SQL, T-SQL, CSS, CSSModules, SASS, PHP, Styled Components, Node.js, REST API, websockets, Serverless Framework, NestJS, Haskell, Prolog, C, Java, ORM, git, basic Docker, TDD, AWS, agile methodologies (Scrum) and code reviews (MR/PR), microservices, gRPC,
+									designs patterns, functional, logic and object oriented programming, basic knowledge of animation principles and good coding practices.<br/>
 								</TagChild>
 							</Tag>
 							<Tag
-								name='Idiomas'
+								name='Interests'
 								closedTag
 							>
 								<TagChild>
-									Tengo un inglés fluido.
-									En 2014 hice un viaje a Londres con mi secundaria llamado Experience English y tuve clases de inglés en Hampstead School Of English en nivel Advanced (C1).<br/>
-									En 2015 rendí el First Certificate in English de Cambridge English y obtuve una nota de 179/190 (Grade B).<br/>
-									Actualmente en mi trabajo me comunico con el cliente en inglés -todos los días-.<br/>
-								</TagChild>
-							</Tag>
-							<Tag
-								name='Intereses'
-								closedTag
-							>
-								<TagChild>
-									Me gusta enseñar, en la empresa donde actualmente trabajo di una charla virtual sobre React Hooks <div onClick={handleToggleVideo} className={`video-toggle-${theme}`}>la podés ver clickeando acá</div>.<br/>
-									{renderYoutubeVideo()}
-									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a>.<br/>
-									Desde 2019 soy ayudante de la materia Paradigmas de Programación en mi facultad.<br/>
-									Entre 2016 y 2018 me desempeñé como líder de grupo en educación no formal de una ONG a cargo de grupo de niños y en 2019 fui coordinadora de ese área.<br/>
+									<ul>
+										<li>
+											I like teaching! At my previous job I gave a React Hooks talk <a className={`link-${theme}`} href='https://youtu.be/8u9gtSAV9pI' target='_blank' rel="noopener noreferrer" title='React Hooks Talk at PSh'>which you can watch clicking here</a>.
+										</li>
+										<li>
+											I also like learning, that's why I participate in developer communities and attend events like MeetupJS, Nerdearla, among others. In August 2020, I spoke at the Women Who Code Buenos Aires conference about React and React Hooks: <a className={`link-${theme}`} href='https://youtu.be/zW8ExdL14M0?t=2592' target='_blank' rel="noopener noreferrer" title='React Hooks Talk at WWCBA'>click here to watch it</a>
+										</li>
+										<li>
+											I care deeply about diversity in tech.
+										</li>
+										<li>
+											One of my 2021 goals is to participate in more events as a speaker.
+										</li>
+										<li>
+											I want to continue learning and working with React and other Frontend technologies. In the future I want to become a Tech Leader and teach, help and lead my teammates.
+										</li>
+										<li>
+											Since 2019 I've been the Paradigmas de Programación (Paradigms of Programming, it’s a subject) teacher's aide at my university.
+										</li>
+									</ul>
 								</TagChild>
 							</Tag>
 						</CVItems>
