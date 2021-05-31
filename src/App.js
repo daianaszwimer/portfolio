@@ -68,20 +68,6 @@ const Name = styled.h1`
 function App() {
 
 	const [theme, setTheme] = useState(themes.light)
-	const [isYoutubeVideoOpened, setIsYoutubeVideoOpened] = useState(false)
-
-	const renderYoutubeVideo = () => (
-		isYoutubeVideoOpened &&
-			<>
-				<iframe title='React Hooks Tech Talk Video' width="560" height="315" src="https://www.youtube.com/embed/8u9gtSAV9pI" frameBorder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowFullScreen/> <br/>
-			</>
-	)
-
-	const handleToggleVideo = () => {
-		setIsYoutubeVideoOpened(prevValue => !prevValue)
-	}
 
 	const toggleTheme = () => {
 		setTheme(prevTheme => prevTheme === themes.light ? themes.dark : themes.light)
@@ -111,11 +97,9 @@ function App() {
 								closedTag
 							>
 								<TagChild>
-									Empecé a trabajar en Febrero de 2017 en <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer" title='PSh'>PSh</a>, donde trabajo actualmente.<br/>
-									Entre Febrero y Abril de ese año programé en React Native.<br/>
-									A partir de Abril de 2017 y hasta la actualidad, programo en PHP, Node.js y React.js <span role='img' aria-label='red heart'>❤️</span>️<br/>
-									De React, soy una de las referentes técnicas en mi proyecto (esta página está hecha con React <span role='img' aria-label='face tongue'>😜️</span>️)<br/>
-									Trabajo en el desarrollo de <a className={`link-${theme}`} href='https://nearpod.com/' title='Nearpod' target='_blank' rel="noopener noreferrer">Nearpod</a>.<br/>
+									Tengo 4 años de experiencia como Full Stack Developer. Desde febrero 2017 hasta octubre 2020 trabajé en una software factory llamada <a className={`link-${theme}`} href='https://wearepsh.com' target='_blank' rel="noopener noreferrer" title='PSh'>PSh</a> donde trabajé con React, Jest, PHP, Node.js y un poco de React Native.<br/>
+									Desde octubre 2020 hasta marzo 2021 trabajé en <a className={`link-${theme}`} href='https://distillery.com' target='_blank' rel="noopener noreferrer" title='Distillery'>Distillery</a> con Node.js y AWS.<br/>
+									Luego trabajé como freelance en <a className={`link-${theme}`} href='https://standardnotes.org' target='_blank' rel="noopener noreferrer" title='Standard Notes'>Standard Notes</a> desde Marzo hasta Mayo 2021 con React y Ruby on Rails.
 								</TagChild>
 							</Tag>
 							<Tag
@@ -124,7 +108,7 @@ function App() {
 							>
 								<TagChild>
 									Hice mi secundaria en la escuela Técnica ORT entre 2012 y 2016, donde me recibí con honores y con el título de Bachiller Té́cnico con Orientación en Informática y Medios de Comunicación Digitales.<br/>
-									Luego, desde 2017 estoy estudiando en la Universidad Tecnológica Nacional la carrera de Ingeniería en Sistemas. Me encuentro cursando materias de tercer y cuarto año.<br/>
+									Luego, desde 2017 estoy estudiando en la Universidad Tecnológica Nacional la carrera de Ingeniería en Sistemas. Me encuentro cursando materias de cuarto año.<br/>
 								</TagChild>
 							</Tag>
 							<Tag
@@ -132,7 +116,7 @@ function App() {
 								closedTag
 							>
 								<TagChild>
-									Tengo conocimientos en: JavaScript (ES6), React, Redux, Next.js, React Router, Typescript, Jest, SQL, T-SQL, CSS, SASS, PHP, Node.js, NestJS, Haskell (paradigma funcional), Prolog (paradigma lógico), C,
+									Tengo conocimientos en: JavaScript (ES6), React, Redux, Next.js, React Router, Typescript, Jest, SQL, T-SQL, CSS, SASS, PHP, Node.js, NestJS, Haskell (paradigma funcional), Prolog (paradigma lógico), AWS, Ruby,
 									Java, POO, git, microservicios, básicos de Docker, experiencia trabajando con metodologías ágiles (Scrum) y code review (MR/PR),
 									patrones de diseño y buenas prácticas de programación (me encantan los códigos prolijos y que cumplen con buenas prácticas).<br/>
 								</TagChild>
@@ -145,7 +129,7 @@ function App() {
 									Tengo un inglés fluido.
 									En 2014 hice un viaje a Londres con mi secundaria llamado Experience English y tuve clases de inglés en Hampstead School Of English en nivel Advanced (C1).<br/>
 									En 2015 rendí el First Certificate in English de Cambridge English y obtuve una nota de 179/190 (Grade B).<br/>
-									Actualmente en mi trabajo me comunico con el cliente en inglés -todos los días-.<br/>
+									Dado que siempre trabajé para clientes internacionales, en mi trabajo siempre me comuniqué en inglés<br/>
 								</TagChild>
 							</Tag>
 							<Tag
@@ -153,11 +137,20 @@ function App() {
 								closedTag
 							>
 								<TagChild>
-									Me gusta enseñar, en la empresa donde actualmente trabajo di una charla virtual sobre React Hooks <div onClick={handleToggleVideo} className={`video-toggle-${theme}`}>la podés ver clickeando acá</div>.<br/>
-									{renderYoutubeVideo()}
-									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, actualmente estoy realizando un <a className={`link-${theme}`} href='https://www.edx.org/course/web-accessibility-introduction' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a>.<br/>
-									Desde 2019 soy ayudante de la materia Paradigmas de Programación en mi facultad.<br/>
-									Entre 2016 y 2018 me desempeñé como líder de grupo en educación no formal de una ONG a cargo de grupo de niños y en 2019 fui coordinadora de ese área.<br/>
+									Me gusta enseñar, es por esto que participo en eventos como speaker:
+									<ul>
+										<li>
+											En la empresa donde trabajaba di una charla virtual sobre React Hooks, <a className={`link-${theme}`} href='https://youtu.be/8u9gtSAV9pI' target='_blank' rel="noopener noreferrer" title='Charla React Hooks de trabajo en Youtube'>la podés ver en Youtube</a><br/>
+										</li>
+										<li>
+											Participé del evento virtual de WWCBA donde expliqué React y React Hooks, <a className={`link-${theme}`} href='https://youtu.be/zW8ExdL14M0?t=2592' target='_blank' rel="noopener noreferrer" title='Charla WWCBA en Youtube'>podés ver la charla en Youtube</a><br/>
+										</li>
+										<li>
+										Otro medio donde enseño conceptos sobre programación es <a className={`link-${theme}`} href='https://www.tiktok.com/@daiuszw' target='_blank' rel="noopener noreferrer" title='TikTok'>TikTok</a><br/>
+										</li>
+									</ul>
+									También me gusta aprender, es por esto que voy a juntadas de programación como MeetupJS, Nerdearla, entre otras. Además, realicé un <a className={`link-${theme}`} href='https://www.linkedin.com/posts/daiana-szwimer_webdevelopment-a11y-accessibility-activity-6795337139757318145-7wy9' target='_blank' rel="noopener noreferrer" title='Curso de Accesibilidad Web'>curso sobre accesibilidad web</a>.<br/>
+									Durante 2019 y 2020 fui ayudante de la materia Paradigmas de Programación en mi facultad. Actualmente soy ayudante en la materia Técnicas de Gráficos por Computadora.<br/>
 								</TagChild>
 							</Tag>
 						</CVItems>
