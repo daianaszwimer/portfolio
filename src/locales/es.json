@@ -1,3 +1,20 @@
 {
-  "test": "Estamos probando"
+  "test": "Estamos probando",
+  "name": "Hola, me llamo Daiana Szwimer y soy Full Stack Developer",
+  "contact_title": "Contacto",
+  "experience_title": "ExperienciaLaboral",
+  "experience_text_1": "Empecé a trabajar en Febrero de 2017 en ",
+  "experience_text_2": ", donde trabajo actualmente.",
+  "experience_text_3": "Entre Febrero y Abril de ese año programé en React Native.",
+  "experience_text_4": "A partir de Abril de 2017 y hasta la actualidad, programo en PHP, Node.js y React.js",
+  "experience_text_5": "De React, soy una de las referentes técnicas en mi proyecto",
+  "experience_text_6": "Trabajo en el desarrollo de ",
+  "education_title": "Educacion",
+  "education_text": "Hice mi secundaria en la escuela Técnica ORT entre 2012 y 2016, donde me recibí con honores y con el título de Bachiller Té́cnico con Orientación en Informática y Medios de Comunicación Digitales.",
+  "education_text_1": "Luego, desde 2017 estoy estudiando en la Universidad Tecnológica Nacional la carrera de Ingeniería en Sistemas. Me encuentro cursando materias de tercer y cuarto año.",
+  "knowledge_title": "Conocimientos",
+  "knowledge_text": "Tengo conocimientos en: JavaScript (ES6), React, Redux, Next.js, React Router, Typescript, Jest, SQL, T-SQL, CSS, SASS, PHP, Node.js, NestJS, Haskell (paradigma funcional), Prolog (paradigma lógico), C, Java, POO, git, microservicios, básicos de Docker, experiencia trabajando con metodologías ágiles (Scrum) y code review (MR/PR), patrones de diseño y buenas prácticas de programación (me encantan los códigos prolijos y que cumplen con buenas prácticas).",
+  "interests_title": "Intereses",
+  "interests_text": "",
+  "resume": "CV"
 }

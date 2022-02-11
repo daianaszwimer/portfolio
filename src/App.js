@@ -4,8 +4,7 @@ import { themes } from './themes/themeContext'
 import styled, { ThemeProvider } from "styled-components";
 import Box from "./components/Box"
 import Column from "./components/Column"
-import ThemeToggle from "./components/ThemeToggle";
-import { LocaleContext } from "./context/Locale"
+import ThemeToggle from "./components/LanguageToggle";
 import { LocaleProvider } from "./context/Locale";
 
 const Container = styled.div`
@@ -22,7 +21,7 @@ const Container = styled.div`
      #F56476 25%, transparent 25%), linear-gradient(45deg, #F56476 25%, transparent 25%); background-size: 100px 100px;
      background-color: #DFBBB1;
 `;
-/*    */
+
 const BoxContainer = styled.div`
 	display: flex;
 	width: 100%;
@@ -77,20 +76,6 @@ const Name = styled.h1`
 function App() {
 
 	const [theme, setTheme] = useState(themes.light)
-	const [isYoutubeVideoOpened, setIsYoutubeVideoOpened] = useState(false)
-
-	const renderYoutubeVideo = () => (
-		isYoutubeVideoOpened &&
-			<>
-				<iframe title='React Hooks Tech Talk Video' width="560" height="315" src="https://www.youtube.com/embed/8u9gtSAV9pI" frameBorder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowFullScreen/> <br/>
-			</>
-	)
-
-	const handleToggleVideo = () => {
-		setIsYoutubeVideoOpened(prevValue => !prevValue)
-	}
 
 	const toggleTheme = () => {
 		setTheme(prevTheme => prevTheme === themes.light ? themes.dark : themes.light)
@@ -204,7 +189,7 @@ function App() {
 					<Box text={education} title="Educación"/>
 					<Box text={technologies} title="Tecnologías"/>
 				</BoxContainer>
-				<Footer style={{position: "absolute"}}>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target='_blank' rel="noopener noreferrer">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target='_blank' rel="noopener noreferrer"> www.flaticon.com</a></Footer>
+			<Footer>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target='_blank' rel="noopener noreferrer">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target='_blank' rel="noopener noreferrer"> www.flaticon.com</a></Footer>
 			</Container>
 		</LocaleProvider>
 	)
