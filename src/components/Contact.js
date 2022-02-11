@@ -1,17 +1,15 @@
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from "styled-components";
+import React  from 'react';
+import styled  from "styled-components";
+import Link from "./Link";
 
 const Wrapper = styled.h4`
 	display: block;
 `;
 
 const Contact = (props) => {
-	const { theme } = useContext(ThemeContext)
 	return (
 		<Wrapper>
-			{props.name}: <a className={`link-${theme}`} href={props.url} title={props.name} target='_blank' rel="noopener noreferrer">
-				{props.text}
-			</a>
+			{props.name}: <Link link={props.url} title={props.name} text={props.text} />
 		</Wrapper>
 	)
 }

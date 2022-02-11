@@ -5,12 +5,3 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	color: #331E38;
 }
-
-a {
-	color: #EFEFEF
-}
-
-
-a:hover {
-	color: #F4E8C1;
-}

@@ -69,29 +69,12 @@
 	}
 }
 
-.particles > .particle {
-	border-radius: 100%;
-	position: absolute;
-	background-size: 100% 100%;
-	background: transparent no-repeat;
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
-.particle-smaller {
-	width: 5px;
-	height: 5px;
-}
-.particle-small {
-	width: 10px;
-	height: 10px;
-}
-.particle-normal {
-	width: 15px;
-	height: 15px;
-}
-.particle-big {
-	width: 20px;
-	height: 20px;
-}
-.particle-bigger {
-	width: 25px;
-	height: 25px;
+
+li::before {
+	content: "👉 ";
 }

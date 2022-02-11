@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled  from "styled-components";
-import { hoverColor } from "../themes/themeContext"
+import { hoverColor } from "../context/Theme"
 
 const Wrapper = styled.div`
 	width: 100%;
