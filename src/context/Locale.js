@@ -6,7 +6,6 @@ import { languageOptions, dictionaryList } from '../locales';
 export const LocaleContext = createContext({
     userLanguage: 'en',
     dictionary: dictionaryList.en,
-    userLanguageChange: () => {console.log("tenes q implementarlo aca")}
 });
 
 const LANG_ITEM_NAME = "dsp-lang"
@@ -15,7 +14,6 @@ const LANG_ITEM_NAME = "dsp-lang"
 export function LocaleProvider({ children }) {
     const defaultLanguage = window.localStorage.getItem(LANG_ITEM_NAME);
     const [userLanguage, setUserLanguage] = useState(defaultLanguage || 'en');
-    console.log(dictionaryList[userLanguage], "diccionario-------");
     const provider = {
         userLanguage,
         dictionary: dictionaryList[userLanguage],
